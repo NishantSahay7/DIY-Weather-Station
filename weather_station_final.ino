@@ -20,12 +20,12 @@ float dst,bt,bp,ba;
 char dstmp[20],btmp[20],bprs[20],balt[20];
 bool bmp085_present=true;
 
-char auth[] = "c241827d9c854139abebbef4828a5291";//"a59e6deb52104dc486d4eff51af7e8da";   //Authentication Key will be there in the Blynk App
+char auth[] = "Put your Authication key from the Blynk app here";  //Authentication Key will be there in the Blynk App
 
 //________________________Mention the SSID and Password____________________________________________________
 
-char ssid[] = "TP-LINK_27BE"; //SSID of the WiFi hotspot available
-char pass[] = "EthicalH";  //Password of the WiFi
+char ssid[] = "Your WiFi SSID"; //SSID of the WiFi hotspot available
+char pass[] = "Your Password";  //Password of the WiFi
 
 #define DHTPIN 2                                    //Connect the DHT11 sensor's data pin to GPIO2(D4) of Nodemcu    
 #define DHTTYPE DHT11                               //Mention the type of sensor we are using, Here it it DHT11, for DHT22 just replace DHT11 with DHT22
