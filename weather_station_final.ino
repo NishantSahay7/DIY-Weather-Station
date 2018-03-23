@@ -66,13 +66,7 @@ void sendSensor()
 //______________________________Measuring the Dew Point______________________________________________________
 
           double gamma = log(h/100) + ((17.62*t) / (243.5+t));
-          double dp = 243.5*gamma / (17.62-gamma);
-//_____________________________________Checking for Rain______________________________________________________
-
-          RS = analogRead(RainSensor);
-          RS = constrain(RainSensor, 150, 440); 
-          RS = map(RainSensor, 150, 440, 1023, 0);
-
+          double dp = 243.5*gamma / (17.62-gamma);2
 
 
 //______________________Reading the value of Pressure, Temperature, Altitude from the BMP180__________________
@@ -98,7 +92,6 @@ void sendSensor()
           Blynk.virtualWrite(V12, bt);
           Blynk.virtualWrite(V13, dst);
           Blynk.virtualWrite(V14, dp);
-          Blynk.virtualWrite(V15, RS);
              
 }
 
