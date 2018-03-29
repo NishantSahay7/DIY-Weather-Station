@@ -85,13 +85,13 @@ void sendSensor()
   
  //_______________Printing the valus of the above read value on to the Virtual Pins in the Bluynk App_____________
  
-          Blynk.virtualWrite(V5 , h);
-          Blynk.virtualWrite(V6 , t);
-          Blynk.virtualWrite(V10, bp);
-          Blynk.virtualWrite(V11, ba);
-          Blynk.virtualWrite(V12, bt);
-          Blynk.virtualWrite(V13, dst);
-          Blynk.virtualWrite(V14, dp);
+          Blynk.virtualWrite(V5 , h);   //h=Humidity
+          Blynk.virtualWrite(V6 , t);   //t=temp_dht11
+          Blynk.virtualWrite(V10, bp);  //bp=pressure
+          Blynk.virtualWrite(V11, ba);  //ba=altitude
+          Blynk.virtualWrite(V12, bt);  //bt=temp_bmp180
+          Blynk.virtualWrite(V13, dst); //dst=sealevel pressure
+          Blynk.virtualWrite(V14, dp);  //dp=dew point
              
 }
 
@@ -99,13 +99,13 @@ void sendSensor()
 void setup()
 {
   
-          Serial.begin(9600); //Initializing the Serial Monitor with a Baud Rate of 9600
+          Serial.begin(9600);               //Initializing the Serial Monitor with a Baud Rate of 9600
         
           Blynk.begin(auth, ssid, pass);
         
-          dht.begin();  //Initializing the DHT sensor
+          dht.begin();                      //Initializing the DHT sensor
           
-          Wire.begin(I2C_SDA, I2C_SCL); //Initializing the I2C connection
+          Wire.begin(I2C_SDA, I2C_SCL);     //Initializing the I2C connection
           
           delay(10);
           
