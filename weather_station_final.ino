@@ -13,9 +13,6 @@ Adafruit_BMP085 bmp;                  //Defining the object bmp
 #define I2C_SCL 12                    //Connect SCL pin of BMP180 to GPIO12(D6) of Nodemcu
 #define I2C_SDA 13                    //Connect SDA pin of BMP180 to GPIO13(D7) of Nodemcu
 
-int RainSensor = A0;
-int RS=0; //variable to store RainDrop Sensor Module's output value
-
 float dst,bt,bp,ba;
 char dstmp[20],btmp[20],bprs[20],balt[20];
 bool bmp085_present=true;
