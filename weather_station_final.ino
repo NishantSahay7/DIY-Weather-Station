@@ -63,7 +63,7 @@ void sendSensor()
 //______________________________Measuring the Dew Point______________________________________________________
 
           double gamma = log(h/100) + ((17.62*t) / (243.5+t));
-          double dp = 243.5*gamma / (17.62-gamma);2
+          double dp = 243.5*gamma / (17.62-gamma);
 
 
 //______________________Reading the value of Pressure, Temperature, Altitude from the BMP180__________________
